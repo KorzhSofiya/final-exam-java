@@ -21,5 +21,9 @@ public class DelCourse implements Command{
     public void build() {
         log.info("Starting delete course command");
         System.out.println("Enter course id:");
+        String id = scanner.nextLine().trim();
+        //search for right course
+        Course course = new Course();
+        catalogService.delete(course);
     }
 }
